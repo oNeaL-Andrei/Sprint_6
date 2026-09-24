@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC # Подклю�
 from selenium.webdriver.common.keys import Keys # Подключаем класс для отправки клавиш клавиатуры
 
 class BasePage:
-    
+
     def __init__(self, driver):
         self.driver = driver # Сохраняем экземпляр драйвера браузера для всех классов
 

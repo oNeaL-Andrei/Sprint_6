@@ -1,9 +1,11 @@
 import pytest  # Подключаем pytest
+import allure  # Подключаем Allure для создания отчётов
 from pages.main_page import MainPage  # Импортируем класс главной страницы
-from data import FaqData  # Импортируем данные ответов FAQ 
+from data import FaqData  # Импортируем данные ответов FAQ
 
 class TestFAQ:  # Класс для тестов блока "Вопросы о важном"
 
+    @allure.title("Проверка ответов на вопросы FAQ")  # Добавление заголовка в отчёт Allure
     @pytest.mark.parametrize("index, expected_answer", FaqData.FAQ_DATA_LIST)  # Параметризация по всем 8 вопросам
     def test_faq_answers(self, driver, index, expected_answer):  # Тест проверки текста ответа FAQ
         main_page = MainPage(driver)  # Создаем объект главной страницы

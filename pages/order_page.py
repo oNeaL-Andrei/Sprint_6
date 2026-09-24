@@ -1,4 +1,3 @@
-from selenium.webdriver.common.keys import Keys  # Подключаем инструмент для работы с клавишами (например, Enter)
 from pages.base_page import BasePage  # Импортируем базовый класс страниц
 from locators import OrderPageLocators  # Импортируем локаторы страницы заказа
 
